@@ -1,27 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  labels:
-    name: springboot
-  name: spring-controller
-  spec:
-   replicas: 3
-   strategy:
-    type: Recreate
-   selector:
-    matchLabels:
-    app: spring-controller
-   template:
-    metadata:
-      labels:
-        name: springboot
-  spec:
-      containers:
-      - image: dockerhandson/spring-boot-mongo
-        name: springboot
-        ports:
-        - name: springboot
-          containerPort: 8080      
+ name: nginx
+spec:
+ replicas: 3
+strategy:
+ type: Recreate
+selector: matchLabels
+ app: nginx
+ template:
+metadata:
+ labels:
+app: nginx
+spec:
+containers:
+-
+name: nginx
+image: nginx:1.7.9
+ports:
+-
+containerPort : 80    
 ---
 # Node Port Service
 apiVersion: v1
