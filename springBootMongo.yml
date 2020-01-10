@@ -40,7 +40,7 @@ spec:
 ---
 # Mongo host path rc
 apiVersion: apps/v1
-kind: Deployment
+kind: ReplicationController 
 metadata:
   labels:
     name: mongo
