@@ -10,7 +10,7 @@ spec:
 type: Recreate
 selector:
 matchLabels
-app:
+app: spring-controller
   template:
     metadata:
       labels:
