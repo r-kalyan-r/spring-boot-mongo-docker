@@ -9,13 +9,13 @@ spec:
   strategy:
 type: Recreate
 selector:
-matchLabels :
-app: spring-controller
-  template:
+matchLabels:
+   app: spring-controller
+template:
     metadata:
       labels:
         name: springboot
-    spec:
+  spec:
       containers:
       - image: dockerhandson/spring-boot-mongo
         name: springboot
