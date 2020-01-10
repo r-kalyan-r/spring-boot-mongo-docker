@@ -20,7 +20,7 @@ spec:
         ports:
         - containerPort: 80
 ---
-# Node Port Service
+/* # Node Port Service
 apiVersion: v1
 kind: Service
 metadata:
@@ -77,4 +77,4 @@ spec:
     - port: 27017
       targetPort: 27017
   selector:
-    name: mongo
+    name: mongo */
