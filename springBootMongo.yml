@@ -11,7 +11,7 @@ type: Recreate
 selector:
 matchLabels :
 app: spring-controller
-template:
+  template:
     metadata:
       labels:
         name: springboot
