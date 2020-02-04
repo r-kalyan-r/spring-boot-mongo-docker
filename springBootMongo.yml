@@ -23,7 +23,7 @@ spec:
         - name: cntnm
 
 
-          image: dockerhandson/java-web-app:3
+          image: raparthikalyan/kal-boot-mongo
           ports:
           - containerPort: 8080
           resources:
