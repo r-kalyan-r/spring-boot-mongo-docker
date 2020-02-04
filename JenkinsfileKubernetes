@@ -1,11 +1,11 @@
 node{
-     
+     #password= adgjlsfhk!@12
     stage('SCM Checkout'){
-        git credentialsId: 'GIT_CREDENTIALS', url:  'https://github.com/MithunTechnologiesDevOps/spring-boot-mongo-docker.git',branch: 'master'
+        git url: 'https://github.com/r-kalyan-r/spring-boot-mongo-docker.git', branch: 'master'
     }
-    
+    # manage jenkins > global tool configuration
     stage(" Maven Clean Package"){
-      def mavenHome =  tool name: "Maven-3.6.1", type: "maven"
+      def mavenHome =  tool name: "maven", type: "maven"
       def mavenCMD = "${mavenHome}/bin/mvn"
       sh "${mavenCMD} clean package"
       
@@ -13,7 +13,7 @@ node{
     
     
     stage('Build Docker Image'){
-        sh 'docker build -t dockerhandson/spring-boot-mongo .'
+        sh 'docker build -t raparthikalyan/spring-boot-mongo .'
     }
     
     stage('Push Docker Image'){
