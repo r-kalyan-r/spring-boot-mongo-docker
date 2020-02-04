@@ -22,11 +22,11 @@ node{
         }
         sh 'docker push dockerhandson/spring-boot-mongo'
      }
-     
+     # install kubernetes continuous integration > add credentials> kubernetes configuration > in master sudo cat .kube/config
      stage("Deploy To Kuberates Cluster"){
        kubernetesDeploy(
          configs: 'springBootMongo.yml', 
-         kubeconfigId: 'KUBERNATES_CONFIG',
+         kubeconfigId: 'Name of KUBERNATES_CONFIG',
          enableConfigSubstitution: true
         )
      }
