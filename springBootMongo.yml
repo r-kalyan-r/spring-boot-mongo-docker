@@ -42,11 +42,11 @@ metadata:
     name: hpaservice
 spec:
   ports:
-    - port: 8080
+    - port: 80
       targetPort: 8080
   selector:
     name: podnm
-  type: ClusterIP
+  type: NodePort
 ---
 apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
