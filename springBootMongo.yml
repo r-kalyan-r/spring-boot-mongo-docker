@@ -26,6 +26,7 @@ spec:
           image: raparthikalyan/kal-boot-mongo
           ports:
           - containerPort: 8080
+          
           resources:
             requests:
               cpu: "100m"
